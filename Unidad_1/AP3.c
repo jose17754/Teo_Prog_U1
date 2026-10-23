@@ -1,5 +1,6 @@
+//Llamado de librerias necesarias
 #include <stdio.h>
-
+//funcion principal
 int main(){
     //creacion de varibles
     int GB,archivos_doc,tamanio_doc,archivos_img,tamanio_img,archivos_vid,tamanio_vid,archivos_prog,tamanio_prog,capacidad_disco_GB;
