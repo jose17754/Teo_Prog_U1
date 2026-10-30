@@ -13,8 +13,9 @@ int main(){
     printf("INGRESE LA NOTA DE LABORATORIO");
     scanf("%f",&NL);
     //PROCESOS INTERNOS
-    NC = (60-NL*0.30)/0.70;
+    NC = (NOTA_APRO-NL*0.30)/0.70;
     C3 = (NC* 3)-C1-C2;
     //PRESENTACION DE RESUKLTRADOS
+    printf("jd %.2f",NC);
     printf("LA NOTA NECESARIA ES:  %.2f",C3);
 }
