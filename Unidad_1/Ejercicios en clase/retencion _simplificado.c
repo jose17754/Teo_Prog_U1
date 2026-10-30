@@ -1,32 +1,30 @@
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-//sistema de factura
-int main(){
-/* CREA UN SISTEMA QUE PIDA EL VALOR TOTAL DE LA FACTURA Y DE QUE TIPO ES: SI ES POR SERVICIOS PROFECIONALES SE RETIENE EL 10%, 
-SI ES POR SERVICIOS EDUCATIVOS EL 8 % SE DEBE DEVOLVER EL VALOR RETENIDO*/
-//creacion y deficion de variables
-float valor_fact;
-float retencion=0.0;
-int seleccion;
-char nombres[60];
-int dec=1;
-//inicio del sistema
-printf("--------------------------------------------------------\n");
-printf("               SISTEMA DE FACTURACION\n");
-printf("--------------------------------------------------------\n");
-//ingreso de varibles
-printf("Ingrese su nombre: \n");
-fgets(nombres,60, stdin);
-printf("Ingrese el valor total de la factura: \n");
-scanf("%f",&valor_fact);
 
-printf("Ingrese el tipo de factura.\n1. Factura Prefesional\n2. Factura Educativa.\n");
-scanf("%d",&seleccion);
+int main() {
+    int res1, res2, fuente,resp;
+    int req,corr,pot;
+    printf("Ingrese el valor de la resistencia 1 (en ohmios): ");
+    scanf("%d",res1);
+    printf("Ingrese el valor de la resistencia 2 (en ohmios): ");
+    scanf("%d",res2);
+    printf("Ingrese el valor de la fuente (en voltaje): ");
+    scanf("%d",fuente);
+    printf("REQUERIMIETOS DEL FABRICANTE\n Corriete maxima: 2 A\n Potencia maxima: 20 W\n Resistencia equivalente minima admisible: 3 ohms\n");
+    printf("Las resistencias estan en serie o paralelo?\n1-selecionar serie\n2-selencionar paralelo: ");
+    scanf("%d",&resp);
+    if (resp==1){
+        req=res1+res2;
+    }else if(resp==2){
+        req=(res1*res2)/(res1+res2);
+    }else{
+        printf("Valor ingresado icorrecto");
+    }
+    
+    corr=fuente/req;
+    pot=fuente*corr;
+    printf("el valor de la resistencia es %d ",req);
+    printf("el valor de la corriente es %d ",corr);
+    printf("el valor de la potencia es %d ",pot);
 
-//condiiconal y calculos
-retencion=(seleccion==1)?valor_fact*0.10:(seleccion==2)?valor_fact*0.08:printf("Sintaxis no correcta.\n"),exit(1);
 
-//presentacioon
-printf("Estimado %sSu valor q retener equivale a %2f ",nombres,retencion);
 }
