@@ -1,5 +1,20 @@
-Una cuerda de longitud de 10m tiene un extremo sujeto a una carga y el otro extremo pasa por una polea movil
-y termina en un punto fijo, cuanta longitud de cuerda esta en cada extremo? tanto en la polea fija como en la movil.
-posocio inicial y=4m, la distancia entre punto fijo y carga d=4m
+Un lgoritmo para calcular la presion del agua con n profundidad.
 Inicio
+    g=9.81;
+    presion_inicial,Presion_total,h;
+    densidad_dulce=1000.0;
+    densidad_salada=1027.0;
+    p=101325.0;
+
+    leer h;
     
+    presion_inicial=densidad_dulce*g*h;
+    Presion_total=presion_inicial+p;
+    
+
+    Escirbir "los valores en agua dulce es"+Presion_total
+
+    presion_inicial=densidad_salada*g*h;
+    Presion_total=presion_inicial+p;
+
+    Escirbir "los valores en agua salada es"+Presion_total
