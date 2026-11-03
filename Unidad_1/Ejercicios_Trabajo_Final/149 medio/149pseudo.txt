@@ -1,0 +1,16 @@
+Inicio
+FACTOR=0.5556;
+OFFSET_K=273.15;
+Leer fahrenheit;
+Si (fahrenheit>=0);
+    kelvin=(fahrenheit-32)*FACTOR+OFFSET_K;
+    Si (kelvin>=0);
+        kelvin_redondeado=redondear(kelvin,2);
+        Presentar (fahrenheit+"F equivalen a"+kelvin_redondeado+" K");
+    Sino
+        Presentar ("Error, la temperatura en k debe ser positiva");
+    FinSi
+Sino
+    Presentar ("Error, la temperatura debe ser positiva");
+FinSi
+Fin

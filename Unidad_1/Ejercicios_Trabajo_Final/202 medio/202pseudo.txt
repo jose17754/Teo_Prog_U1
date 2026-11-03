@@ -1,0 +1,11 @@
+Inicio
+Leer z,s,val1;
+promedio=(z+s+val1)/3;
+Si (promedio>0)
+    Presentar ("El promedio es: "+promedio);
+Sino
+    Presentar ("Error, el proemdio es negativo");
+FinSi
+cubo=promedio* promedio * promedio;
+Presentar ("El elevado al cubo es: "+cubo);
+Fin

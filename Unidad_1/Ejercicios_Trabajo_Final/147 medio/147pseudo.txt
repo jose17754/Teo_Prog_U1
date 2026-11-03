@@ -1,0 +1,12 @@
+Inicio
+Presentar ("Se utilizaran cuatro varaibels estas son: y, cuadrado, promedio, diferencia");
+Leer y;
+cuadrado=y^2;
+Si (cuadrado>=0)
+    Presentar ("El cuadrado de "+y+" es "+cuadrado);
+FinSi
+promedio=(y+cuadrado)/2;
+diferencia=cuadrado-promedio;
+Presentar ("Promedio:"+promedio);
+Presentar ("Diferencia: "+diferencia);
+Fin

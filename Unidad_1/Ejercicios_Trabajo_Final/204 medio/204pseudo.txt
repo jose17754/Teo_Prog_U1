@@ -1,0 +1,16 @@
+Inicio
+PI=3.14159;
+FACTOR=360;
+Leer radio,angulo;
+Si (radio>0 AND angulo>0);
+    area_sector=(PI*radio*radio*angulo)/FACTOR;
+    cuadrado=area_sector*area_sector;
+    Presentar ("Area del sector"+area_sector);
+    Presentar ("Cuadrado del area="+cuadrado);
+Sino
+    Presentar ("Error, los datos no son validos");
+FinSi
+Presentar ("Los datos que ingresastew fueron");
+Presentar ("radio"+radio);
+Presentar ("angulo"+angulo);
+Fin

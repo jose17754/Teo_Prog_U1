@@ -1,0 +1,18 @@
+Inicio
+Leer peso, altura;
+IMC = peso / (altura * altura);
+IMC_cuadrado = IMC * IMC;
+Presentar ("El IMC es: "+IMC);
+Si (IMC < 18.5)
+    Presentar ("IMC bajo del rango normal");
+Sino
+    Si (IMC > 25.0)
+        Presentar ("IMC sobre el rango normal");
+    FinSi
+FinSi
+Presentar ("Cuadrado del IMC: "+IMC_cuadrado);
+Presentar ("Presentación de variables auxiliares");
+Presentar ("Peso: "+peso);
+Presentar ("Altura: "+altura);
+Presentar ("IMC: "+IMC);
+Fin

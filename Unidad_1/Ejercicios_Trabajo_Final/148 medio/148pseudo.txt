@@ -1,0 +1,34 @@
+Inicio
+Leer nota_1,nota_2,nota_3,nota_4,nota_5,referencia;
+suma=nota_1+nota_2+nota_3+nota_4+nota_5;
+mayor=0.0;
+menor=0.0;
+Si (nota_2>mayor)
+    mayor=nota_2;
+FinSi
+Si (nota_3>mayor)
+    mayor=nota_3;
+FinSi
+Si (nota_4>mayor)
+    mayor=nota_4;
+FinSi
+Si (nota_5>mayor)
+    mayor=nota_5;
+FinSi
+Si (nota_2<menor)
+    menor=nota_2;
+FinSi
+Si (nota_3<menor)
+    menor=nota_3;
+FinSi
+Si (nota_4<menor)
+    menor=nota_4;
+FinSi
+Si (nota_5<menor)
+    menor=nota_5;
+FinSi
+promedio=(suma-mayor-menor)/3;
+porcentaje=(promedio/ referencia)*100;
+Presentar ("Promedio de las tres nota="+promedio);
+Presentar ("Porcentaje respecto a la refereia:"+porcentaje);
+Fin

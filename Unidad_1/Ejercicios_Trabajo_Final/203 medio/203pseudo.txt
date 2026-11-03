@@ -1,0 +1,13 @@
+Inicio
+TASA_CAMBIO=0.27;
+PI=3.14;
+Leer soles;
+dolares=soles*TASA_CAMBIO;
+Si (dolares>0)
+    Presentar (soles+"soles son igual a "+dolares+" dolares");
+Sino
+    Presentar ("ERROR EL VALOR ES NEGATIVO");
+FinSi
+producto_pi=dolares*PI;
+Presentar ("El producto de PI con el valor en dólares es:"+producto_pi);
+Fin

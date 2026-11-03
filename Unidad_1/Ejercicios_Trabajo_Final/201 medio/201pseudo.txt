@@ -1,0 +1,15 @@
+Inicio
+Leer largo, ancho, alto;
+contador=0;
+Si (largo>0 AND ancho>0 AND alto>0)
+    volumen=largo*ancho *alto;
+    contador=contador+1;
+    bono = volumen *1.5;
+    contador=contador +1;
+    Presentar ("Volumen: "+volumen);
+    Presentar ("Bono: "+bono);
+    Presentar ("Cantidad de operaciones realizadas:"+contador);
+Sino
+    Presentar ("Error, dimensiones menores a cero no validas");
+FinSi
+Fin

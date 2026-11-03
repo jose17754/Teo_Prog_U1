@@ -1,0 +1,48 @@
+Inicio
+TARIFA_B = 25.0;
+TARIFA_P = 45.0;
+TARIFA_V = 80.0;
+DESC_ESTUDIANTE = 0.20;
+DESC_ADULTO_MAYOR = 0.30;
+COSTO_SERVICIO_EXTRA = 5.0;
+DESCUENTO_FINAL = 0.05;
+Presentar ("----------------------------------------------------");
+Presentar ("Bienvenido al gimnasio, calculemos su tarifa mensual");
+Presentar ("----------------------------------------------------");
+Leer edad, tipo_membresia, frecuencia_semanal, servicios_adicionales, es_estudiante;
+Si (edad > 0) AND (frecuencia_semanal >= 1) AND (frecuencia_semanal <= 7) 
+AND (servicios_adicionales >= 0) AND ((tipo_membresia == 'B') 
+OR (tipo_membresia == 'P') OR (tipo_membresia == 'V')) AND ((es_estudiante == 'S') OR (es_estudiante == 'N'))
+    Si (tipo_membresia == 'B')
+        tarifa_base = TARIFA_B;
+    Sino
+        Si (tipo_membresia == 'P')
+            tarifa_base = TARIFA_P;
+        Sino
+            tarifa_base = TARIFA_V;
+        FinSi
+    FinSi
+    costo_extra = servicios_adicionales*COSTO_SERVICIO_EXTRA;
+    subtotal = tarifa_base+costo_extra;
+    Si (edad >= 65)
+        descuento = subtotal*DESC_ADULTO_MAYOR;
+    Sino
+        Si (es_estudiante == 'S')
+            descuento = subtotal * DESC_ESTUDIANTE;
+        Sino
+            descuento = 0;
+        FinSi
+    FinSi
+    tarifa_descuento = subtotal - descuento;
+    descuento_adicional = tarifa_descuento *DESCUENTO_FINAL;
+    tarifa_final = tarifa_descuento-descuento_adicional;
+    Presentar ("Tarifa base: "+tarifa_base);
+    Presentar ("Costo de servicios adicionales: "+costo_extra);
+    Presentar ("Descuento aplicado: " + descuento);
+    Presentar ("Descuento adicional del 5%: "+descuento_adicional);
+    Presentar ("Tarifa mensual final: "+tarifa_final);
+Sino
+    Presentar ("Error, datos ingresados no validos");
+FinSi
+Presentar ("Final de operacion, fin del sistema");
+Fin

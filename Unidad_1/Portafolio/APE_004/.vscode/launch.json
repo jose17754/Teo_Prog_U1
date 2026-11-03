@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "hola_mundo",
+            "request": "launch",
+            "mainClass": "hola_mundo",
+            "projectName": "APE_004_cb9687c2"
+        },
+        {
             "name": "Launch",
             "type": "lldb",
             "request": "launch",
