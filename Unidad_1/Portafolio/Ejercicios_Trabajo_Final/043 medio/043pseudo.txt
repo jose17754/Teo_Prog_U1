@@ -1,0 +1,17 @@
+Inicio
+Leer nombre, apellido, resul_1, resul_2;
+nombre_completo = nombre + " " + apellido;
+diferencia_absoluta = resul_1 - resul_2;
+
+Si (diferencia_absoluta < 0)
+    diferencia_absoluta = diferencia_absoluta * (-1);
+FinSi
+
+Si (longitud(nombre) > 0) and (longitud(apellido) > 0)
+    Presentar ("Nombre completo: " + nombre_completo);
+Sino
+    Presentar ("Nombre o apellido vacío");
+FinSi
+Presentar ("Diferencia absoluta: " + diferencia_absoluta);
+Presentar ("La operación a terminado");
+Fin

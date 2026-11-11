@@ -1,0 +1,11 @@
+Inicio
+DIVISOR=5;
+Leer y;
+Si (y%5==0 AND y!=0)
+    Presentar ("El numero es multiplo de 5");
+Sino
+    Presentar ("El numero no es multiplo de 5");
+FinSi
+resul_div=y/DIVISOR;
+Presentar ("la division  es igual a: "+resul_div);
+Fin

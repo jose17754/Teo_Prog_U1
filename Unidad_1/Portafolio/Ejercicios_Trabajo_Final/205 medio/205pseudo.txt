@@ -1,0 +1,14 @@
+Inicio
+Leer n, resul_1, resul_2;
+es_par_positivo=(n>0 AND n%2==0);
+Si (es_par_positivo);
+    Presentar ("El numero es par y positivo");
+Sino
+    Presentar ("ERROR EL NUMERO NO CUMPLE LAS CONDICIONES");
+FinSi
+diferencia_absoluta=resul_1-resul_2;
+Si (diferencia_absoluta<0);
+    diferencia_absoluta=diferencia_absoluta*(-1);
+FinSi
+Presentar ("Diferencia absoluta="+diferencia_absoluta);
+Fin

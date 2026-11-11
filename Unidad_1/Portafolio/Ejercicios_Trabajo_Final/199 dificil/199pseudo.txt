@@ -1,0 +1,43 @@
+Inicio
+PESO_CALIDAD=0.35;
+PESO_PLAZOS=0.25;
+PESO_PRECIO=0.25;
+PESO_SERVICIO=0.15;
+VOLUMEN_MIN=100;
+DESCUENTO=0.05;
+Presentar("--------------------------------------------------");
+Presentar("Bienvenido al sistema de evaluacion de proveedores");
+Presentar("--------------------------------------------------");
+Leer calidad, plazos, precio, servicio, volumen_pedidos;
+Si (calidad>=0) AND (calidad<=100) AND (plazos>=0) AND (plazos<=100) AND (precio>=0) 
+AND (precio<=100) AND (servicio>=0) AND (servicio<=100) AND (volumen_pedidos>=0)
+    puntuacion=calidad*PESO_CALIDAD+plazos*PESO_PLAZOS+precio*PESO_PRECIO+servicio*PESO_SERVICIO;
+    descuento=puntuacion*DESCUENTO;
+    puntuacion_final=puntuacion-descuento;
+    Si (puntuacion_final>=70) AND (volumen_pedidos>=VOLUMEN_MIN)
+        categoria="Proveedor aprobado";
+    Sino
+        Si (puntuacion_final>=50) AND (volumen_pedidos>=VOLUMEN_MIN)
+            categoria="Proveedor en observacion";
+        Sino
+            categoria="Proveedor no aprobado";
+        FinSi
+    FinSi
+    Presentar ("Puntuacion obtenida: "+puntuacion);
+    Presentar ("Descuento del 5%: "+descuento);
+    Presentar ("Puntuacion final: "+puntuacion_final);
+    Presentar ("Evaluacion: "+categoria);
+    Si (categoria=="Proveedor aprobado")
+        Presentar ("El proveedor cumple con los requisitos");
+    Sino
+        Si (categoria=="Proveedor en observacion")
+            Presentar ("El proveedor necesita mejorar");
+        Sino
+            Presentar ("El proveedor no cumple con los requisitos");
+        FinSi
+    FinSi
+Sino
+    Presentar ("Error, datos ingresados no validos");
+FinSi
+Presentar ("Final de operacion, fin del sistema");
+Fin

@@ -1,0 +1,28 @@
+Inicio
+VELOCIDAD_MEDIA = 60;
+TIEMPO_BASE = 24;
+FACTOR_EXPRESS = 0.5;
+FACTOR_SAME_DAY = 0.1;
+DESCUENTO = 0.05;
+Leer distancia, tipo_envio, destino, hora_recogida;
+Si (distancia >= 0) AND (hora_recogida >= 0) AND (hora_recogida <= 23) AND
+   ((tipo_envio == 'N') OR (tipo_envio == 'E') OR (tipo_envio == 'S')) AND
+   ((destino == 'U') OR (destino == 'N') OR (destino == 'I'))
+    tiempo_estimado = TIEMPO_BASE + (distancia / VELOCIDAD_MEDIA);
+    Si (tipo_envio == 'E')
+        tiempo_estimado = tiempo_estimado * FACTOR_EXPRESS;
+    Sino
+        Si (tipo_envio == 'S')
+            tiempo_estimado = tiempo_estimado * FACTOR_SAME_DAY;
+        FinSi
+    FinSi
+    descuento_tiempo = tiempo_estimado * DESCUENTO;
+    tiempo_final = tiempo_estimado - descuento_tiempo;
+    Presentar ("Tiempo estimado de entrega: " + tiempo_estimado);
+    Presentar ("Descuento del 5%: " + descuento_tiempo);
+    Presentar ("Tiempo final de entrega: " + tiempo_final);
+Sino
+    Presentar ("Error, datos ingresados no validos");
+FinSi
+Presentar ("Final de operacion, fin del sistema");
+Fin

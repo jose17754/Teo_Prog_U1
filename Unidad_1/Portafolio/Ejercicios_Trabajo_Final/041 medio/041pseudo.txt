@@ -1,0 +1,14 @@
+Inicio
+GAL_LIT = 3.78;
+PI=3.14;
+Leer vol_gal;
+lit = vol_gal * GAL_LIT;
+res_pi=lit*PI;
+Si (lit > 0)
+Presentar (vol_gal+" galones es igual a " + lit," litros ");
+Presentar ("El valor en PI es: "+res_pi);
+Presentar ("Operación matematica multiplicacion realizada");
+Sino
+Presentar ("Valor ingresado incorrecto");
+FinSi
+FIN

@@ -1,0 +1,30 @@
+Inicio
+BAJO=18.5;
+NORMAL=25.0;
+ALTO=30.0;
+Leer peso, altura;
+IMC = peso / (altura * altura);
+IMC_potencia_4 = IMC * IMC * IMC * IMC;
+
+    Si (IMC < BAJO)
+        categoria = "Bajo peso";
+    Sino
+        Si (IMC < NORMAL)
+            categoria = "Normal";
+        Sino
+            Si (IMC < ALTO)
+                categoria = "Sobrepeso";
+            Sino
+                categoria = "Obesidad";
+            FinSi
+        FinSi
+    FinSi
+    Presentar ("IMC es: " + IMC);
+    Presentar ("Categoria: " + categoria);
+    Presentar ("IMC elevado a 4 es: " + IMC_potencia_4);
+Sino
+    Presentar ("Error, peso o altura no validos");
+FinSi
+Presentar ("Este algoritmo solicita datos para calcular el IMC y su elevacion a 4, al final da un mensaje del estado de la persona");
+Presentar ("Final de operacion, fin del sistema");
+Fin

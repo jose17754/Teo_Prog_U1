@@ -1,0 +1,53 @@
+Inicio
+Leer numero;
+
+indice_raiz = 2;
+
+Si (numero > 0)
+    raiz = numero*numero;
+    Presentar ("La raiz cuadrada de " + numero + " es " + raiz);
+
+    Si (raiz > 0) AND (raiz < 10) AND (raiz == truncar(raiz))
+        factorial = 1;
+
+        Si (raiz >= 2)
+            factorial = factorial * 2;
+        FinSi
+
+        Si (raiz >= 3)
+            factorial = factorial * 3;
+        FinSi
+
+        Si (raiz >= 4)
+            factorial = factorial * 4;
+        FinSi
+
+        Si (raiz >= 5)
+            factorial = factorial * 5;
+        FinSi
+
+        Si (raiz >= 6)
+            factorial = factorial * 6;
+        FinSi
+
+        Si (raiz >= 7)
+            factorial = factorial * 7;
+        FinSi
+
+        Si (raiz >= 8)
+            factorial = factorial * 8;
+        FinSi
+
+        Si (raiz >= 9)
+            factorial = factorial * 9;
+        FinSi
+
+        Presentar ("El factorial es: " + factorial);
+    FinSi
+
+Sino
+    Presentar ("Numero no positivo, dato invalido");
+FinSi
+
+Presentar ("Final de operacion, fin del sistema");
+Fin
